@@ -1,6 +1,8 @@
 var express = require("express");
+var morgan = require("morgan");
+
 var app = express();
-app.use(express.logger());
+app.use(morgan());
 
 app.configure(function() {
     app.use(express.static(__dirname));
